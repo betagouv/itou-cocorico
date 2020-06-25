@@ -69,6 +69,8 @@ RUN sed -i -e 's|%SQL_HOST%|'"$SQL_HOST"'|' /cocorico/app/config/parameters.yml 
     && sed -i -e 's|%MONGO_URL%|'"$MONGO_URL"'|' /cocorico/app/config/parameters.yml \
     && sed -i -e 's|%MONGO_DB%|'"$MONGO_DB"'|' /cocorico/app/config/parameters.yml \
     && sed -i -e 's|%HOST_PORT%|'"$HOST_PORT"'|' /cocorico/app/config/parameters.yml \
+    && sed -i -e 's|%GGL_KEY1%|'"$GGL_KEY1"'|' /cocorico/app/config/parameters.yml \
+    && sed -i -e 's|%GGL_KEY2%|'"$GGL_KEY2"'|' /cocorico/app/config/parameters.yml \
     && cat /cocorico/app/config/parameters.yml
 
 RUN composer install
