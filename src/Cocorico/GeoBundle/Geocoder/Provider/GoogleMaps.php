@@ -42,7 +42,7 @@ class GoogleMaps extends AbstractHttpProvider implements ProviderInterface
     /**
      * @var bool
      */
-    const DEBUG = true;
+    const DEBUG = false;
 
     /**
      * @var string|null
