@@ -27,7 +27,8 @@ ENV SQL_HOST=$SQL_HOST\
     HOST_PORT=$HOST_PORT \
     GGL_KEY1=$GGL_KEY1 \
     GGL_KEY2=$GGL_KEY2 \
-    APP_ENV=dev
+    APP_ENV=dev \
+    SYMFONY_ENV=dev 
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -84,5 +85,5 @@ COPY ./docker/run.sh ./run
 RUN echo "Start Symfony server with:\n\
 /home/cocorico/.symfony/bin/symfony server:start --no-tls --port 80\n\
 "
-CMD ["bash"]
-# CMD ["/home/cocorico/.symfony/bin/symfony server:start --no-tls --port 80"]
+# CMD ["bash"]
+CMD ["/home/cocorico/.symfony/bin/symfony server:start --no-tls --port 80"]
