@@ -13,6 +13,8 @@ ARG SQL_PASS=cocorico
 ARG MONGO_URL='mongodb://localhost:27017'
 ARG MONGO_DB=cocorico
 ARG HOST_PORT=9090
+ARG GGL_KEY1=none
+ARG GGL_KEY2=none
 
 
 ENV SQL_HOST=$SQL_HOST\
@@ -23,6 +25,8 @@ ENV SQL_HOST=$SQL_HOST\
     MONGO_URL=$MONGO_URL \
     MONGO_DB=$MONGO_DB \
     HOST_PORT=$HOST_PORT \
+    GGL_KEY1=$GGL_KEY1 \
+    GGL_KEY2=$GGL_KEY2 \
     APP_ENV=dev
 
 RUN apt-get update
@@ -75,5 +79,8 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash
 RUN useradd -ms /bin/bash _www && chown -R _www:_www ./var
 # RUN service nginx restart && service php7.3-fpm start
 COPY ./docker/run.sh ./run
+RUN echo "Start Symfony server with:\n\
+/home/cocorico/.symfony/bin/symfony server:start --no-tls --port 80\n\
+"
 CMD ["bash"]
 # CMD ["/home/cocorico/.symfony/bin/symfony server:start --no-tls --port 80"]
