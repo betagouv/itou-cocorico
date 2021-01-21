@@ -163,6 +163,7 @@ services:
             - { name: form.type }
 
     cocorico.form.type.listing_category:
+        public: true
         class: Cocorico\CoreBundle\Form\Type\ListingCategoryType
         arguments:
             - "@request_stack"
@@ -196,6 +197,7 @@ services:
     cocorico.form.type.listing_search_home:
         class:  Cocorico\CoreBundle\Form\Type\Frontend\ListingSearchHomeType
         parent:  cocorico.form.type.listing_search_result
+        public : true
         tags:
             - { name: form.type }
 
