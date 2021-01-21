@@ -87,7 +87,6 @@
     "behat/mink-selenium2-driver": "*",
     "behat/symfony2-extension": "*",
     "doctrine/doctrine-fixtures-bundle": "*",
-    "fzaninotto/faker": "*",
     "phpunit/phpunit": "*",
     "symfony/maker-bundle": "*",
     "symfony/phpunit-bridge": "*",

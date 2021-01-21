@@ -123,6 +123,8 @@ jms_i18n_routing:
     default_locale: "%cocorico.locale%"
     locales: "%cocorico.locales%"
     strategy: prefix
+    cookie:
+        enabled: false
 
 
 jms_translation:
