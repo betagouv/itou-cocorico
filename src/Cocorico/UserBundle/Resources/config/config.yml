@@ -84,7 +84,10 @@ oneup_uploader:
         user_images:
             max_size: 8000000
             frontend: blueimp
-            allowed_mimetypes: ["image/gif", "image/jpeg", "image/png"]
+            allowed_mimetypes: 
+                image/jpeg: ['jpg', 'jpeg', 'jpe']
+                image/png: ['png']
+                image/gif: ['gif']
             enable_progress: true
             namer: cocorico.namer.image_namer
             storage:
@@ -119,12 +122,12 @@ liip_imagine:
                 auto_rotate: ~
                 thumbnail: { size: ["%cocorico.user_img_profile_w%", "%cocorico.user_img_profile_h%"], mode: inset, cache_type: public, cache_expires: 1 months }
 
-hwi_oauth:
-    connect:
-        account_connector: cocorico_user.oauth.user.provider.entity
-    firewall_names: [main]
-    resource_owners:
-        []
+                # hwi_oauth:
+                #     connect:
+                #         account_connector: cocorico_user.oauth.user.provider.entity
+                #     firewall_names: [main]
+                #     resource_owners:
+                #         []
 #         facebook:
 #             type:                facebook
 #             client_id:           "%cocorico.facebook.app_id%"

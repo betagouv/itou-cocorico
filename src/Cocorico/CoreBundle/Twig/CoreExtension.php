@@ -28,7 +28,6 @@ use Twig_SimpleFunction;
 
 class CoreExtension extends AbstractExtension implements GlobalsInterface
 {
-    protected $currencyExtension;
     protected $translator;
     protected $session;
     protected $locales;
@@ -67,7 +66,6 @@ class CoreExtension extends AbstractExtension implements GlobalsInterface
 
     /**
      *
-     * @param CurrencyExtension   $currencyExtension
      * @param TranslatorInterface $translator
      * @param Session             $session
      * @param array               $parameters
@@ -75,13 +73,11 @@ class CoreExtension extends AbstractExtension implements GlobalsInterface
      */
 
     public function __construct(
-        $currencyExtension,
         TranslatorInterface $translator,
         Session $session,
         array $parameters
     ) {
         //Services
-        $this->currencyExtension = $currencyExtension;
         $this->translator = $translator;
         $this->session = $session;
 

@@ -14,7 +14,7 @@ services:
     cocorico.twig.core_extension:
         class: Cocorico\CoreBundle\Twig\CoreExtension
         arguments:
-            - "@lexik_currency.currency_extension"
+            # - "@lexik_currency.currency_extension"
             - "@translator.default"
             - "@session"
             - parameters:
@@ -52,12 +52,12 @@ services:
         tags:
             - { name: twig.extension }
 
-    lexik_currency.currency_extension:
-        class: "%lexik_currency.currency_extension.class%"
-        arguments:
-            - "@service_container"
-        tags:
-            - { name: twig.extension }
+              # lexik_currency.currency_extension:
+              #     class: "%lexik_currency.currency_extension.class%"
+              #     arguments:
+              #         - "@service_container"
+              #     tags:
+              #         - { name: twig.extension }
 
     cocorico.twig.language_extension:
         class: Cocorico\CoreBundle\Twig\LanguageExtension

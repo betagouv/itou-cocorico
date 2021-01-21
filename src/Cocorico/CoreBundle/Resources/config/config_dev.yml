@@ -2,14 +2,14 @@ framework:
      session:
         gc_probability: 1
 
-deploy:
-    prod:
-        rsync-options: '-azC --force --delete --progress -h --checksum'
-        host: "%cocorico.deploy.host%"
-        dir: "%cocorico.deploy.dir%"
-        user: "%cocorico.deploy.user%"
-        port: 22
-        timeout: 120
+        # deploy:
+        #     prod:
+        #         rsync-options: '-azC --force --delete --progress -h --checksum'
+        #         host: "%cocorico.deploy.host%"
+        #         dir: "%cocorico.deploy.dir%"
+        #         user: "%cocorico.deploy.user%"
+        #         port: 22
+        #         timeout: 120
 #        post_deploy_operations:
 #            - export SYMFONY_ENV=prod && php composer.phar install --no-dev --prefer-dist --optimize-autoloader
 ##            - php composer.phar dump-autoload --optimize

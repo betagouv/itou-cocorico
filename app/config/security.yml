@@ -44,17 +44,17 @@ security:
                 default_target_path: /
                 target_path_parameter: redirect_to
                 success_handler: cocorico.authentication_success_listener
-            oauth:
-                resource_owners:
-                    facebook:           "/%locale%/oauth/fb-login"
-                login_path:        cocorico_user_login
-                failure_path:      cocorico_user_login
-                check_path:        cocorico_user_login_check
-                use_referer: true
-                always_use_default_target_path: false
-                default_target_path: /
-                oauth_user_provider:
-                    service: cocorico_user.oauth.user.provider.entity
+                # oauth:
+                #     resource_owners:
+                #         facebook:           "/%locale%/oauth/fb-login"
+                #     login_path:        cocorico_user_login
+                #     failure_path:      cocorico_user_login
+                #     check_path:        cocorico_user_login_check
+                #     use_referer: true
+                #     always_use_default_target_path: false
+                #     default_target_path: /
+                #     oauth_user_provider:
+                #         service: cocorico_user.oauth.user.provider.entity
 
             logout:
                 path: cocorico_user_logout

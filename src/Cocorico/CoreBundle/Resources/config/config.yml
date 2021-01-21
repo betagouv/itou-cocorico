@@ -139,13 +139,13 @@ jms_translation:
             extractors: [jms_i18n_routing, cocorico_breadcrumbs, sonata_admin ]
 
 
-a2lix_translation_form:
-    locale_provider: default
-    locales: "%cocorico.locales%"
-    default_locale: "%cocorico.locale%"
-    required_locales: "%cocorico.locales%"
-    manager_registry: doctrine
-    templating: "CocoricoCoreBundle:Form:fields_translations.html.twig"
+            # a2lix_translation_form:
+            #     locale_provider: default
+            #     locales: "%cocorico.locales%"
+            #     default_locale: "%cocorico.locale%"
+            #     required_locales: "%cocorico.locales%"
+            #     # manager_registry: doctrine
+            #     templating: "CocoricoCoreBundle:Form:fields_translations.html.twig"
 
 stof_doctrine_extensions:
     default_locale: "%cocorico.locale%"
@@ -158,7 +158,10 @@ oneup_uploader:
         listing_images:
             max_size: 10000000
             frontend: blueimp
-            allowed_mimetypes: ["image/gif", "image/jpg", "image/jpeg", "image/png"]
+            allowed_mimetypes: 
+                image/jpeg: ['jpg', 'jpeg', 'jpe']
+                image/png: ['png']
+                image/gif: ['gif']
             enable_progress: true
             namer: cocorico.namer.image_namer
             storage:
@@ -213,23 +216,13 @@ liip_imagine:
                 upscale: { min: ["%cocorico.listing_img_large_w%", "%cocorico.listing_img_large_h%"] }
                 thumbnail: { size: ["%cocorico.listing_img_large_w%", "%cocorico.listing_img_large_h%"], mode: outbound, cache_type: public, cache_expires: 1 months, allow_upscale: true }
 
-lexik_currency:
-    currencies:
-        default: "%cocorico.currency%"
-        managed: "%cocorico.currencies_for_lexik%"
-    decimal_part:
-        precision:  0                           # number of digits for the decimal part
-        round_mode: up                          # round mode to use (up|down|even|odd)
-    #currency_class: Cocorico\CurrencyBundle\Entity\Currency
-    #default_adapter: doctrine_currency_adapter  # service id OR tag alias, this is adapter used by the conversion service
-
-bazinga_geocoder:
-    providers:
-        google_maps:
-            factory: Bazinga\GeocoderBundle\ProviderFactory\GoogleMapsFactory
-            options:
-                api_key: "%cocorico_geo.google_place_server_api_key%"
-                region:  null
+                # bazinga_geocoder:
+                #     providers:
+                #         google_maps:
+                #             factory: Bazinga\GeocoderBundle\ProviderFactory\GoogleMapsFactory
+                #             options:
+                #                 api_key: "%cocorico_geo.google_place_server_api_key%"
+                #                 region:  null
 
 
 sonata_block:
@@ -268,6 +261,6 @@ sonata_doctrine_orm_admin:
     audit:
         force: false
 
-simple_things_entity_audit:
-    audited_entities:
-        - CocoricoConfigBundle\Entity\Parameter
+        # simple_things_entity_audit:
+        #     audited_entities:
+        #         - CocoricoConfigBundle\Entity\Parameter

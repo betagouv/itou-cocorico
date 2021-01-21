@@ -31,10 +31,31 @@
 ## 15/01/21
 - Fix broken depencey, lockfile, solved by deleting github source repo override for sonataUserBundle in composer.json
 
+## 21/01/21
+- Removing  "willdurand/geocoder-bundle": "^5.0", replace with new package after migration
+- Removing "behat/mink-zombie-drive"
+- Removing "hpatoio/deploy-bundle": "^1.5",
+- Removing "sensio/distribution-bundle": "^5.0",
+- Removing "hwi/oauth-bundle": "^0.5",
+
 # Package replacements / removal
 - Removed mongo packages
 - Removing ramsey/array_column | ramsey/array_column is abandoned, you should avoid using it. Use it-for-free/array_column
 - Removed sensio/generator-bundle, added ymfony/maker-bundle
+
+Second effort, packages removed for clean symfony 4 install:
+
+- "helios-ag/fm-elfinder-bundle": ""
+- "jms/di-extra-bundle": ""
+- "behat/mink-zombie-driver": "",
+- sensio/distribution-bundle": "",
+- "lexik/currency-bundle": "",
+- "hpatoio/deploy-bundle": "",
+
+Missing bundles, check for replacement :
+- BazingaGeocoderBundle
+- fm_elfinder
+
 
 Other alerts:
 ```
