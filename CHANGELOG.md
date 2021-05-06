@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 and to the [CHANGELOG recommendations](http://keepachangelog.com/).
 
 ## ITOU CHANGELOG
-
 ### [3.9] - (2021-05-06)
 - Correctif adoption siret (caractères non numériques)
 - Correctif siret invalide
